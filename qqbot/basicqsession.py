@@ -207,11 +207,11 @@ class BasicQSession(object):
                 expectedCodes = (0, 100003, 100100, 100012)
             )
             # "{'retcode': 0, 'retmsg': 'ok', 'errmsg': 'error'}"
-            if type(result) is dict and \
-                    result.get('retcode', 1) == 0 and \
-                    result.get('errmsg', '') == 'error':
-                DEBUG(result)
-                raise RequestError
+            # if type(result) is dict and \
+            #         result.get('retcode', 1) == 0 and \
+            #         result.get('errmsg', '') == 'error':
+            #     DEBUG(result)
+            #     raise RequestError
         except RequestError:
             ERROR('接收消息出错，开始测试登录 cookie 是否过期...')
             try:

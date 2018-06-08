@@ -158,7 +158,7 @@ def showImage(filename):
         elif HasCommand('shotwell'):
             subprocess.Popen(['shotwell', filename])
         else:
-            raise
+            pass
     elif osName == 'Darwin': # by @Naville
         subprocess.Popen(['open', filename])
     else:
